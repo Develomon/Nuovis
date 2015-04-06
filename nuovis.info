@@ -1,0 +1,7 @@
+
+name = Nuovis
+description = "Drupal base theme."
+core = 7.x
+version = 1.x
+
+stylesheets[all][] = css/styles.css
