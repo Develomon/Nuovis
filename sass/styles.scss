@@ -1,0 +1,46 @@
+////
+/// Styles.
+////
+
+// Import project init.
+//@import "init";
+
+// Import variables.
+// -----------------
+//@import "settings/variables/**/*";
+
+// Import functions.
+// -----------------
+//@import "tools/functions/**/*";
+
+// Import mixins.
+// -----------------
+//@import "tools/mixins/**/*";
+
+// Import generic styles. (Normalize)
+// -----------------
+//@import "generic/**/*";
+
+// Import base styles.
+// -----------------
+//@import "base/**/*";
+
+// Import objects.
+// -----------------
+//@import "objects/**/*";
+
+// Import components. (Never use sass-globbing)
+// -----------------
+//@import "components/{component_name}/{component_file}";
+
+// Import layout.
+// -----------------
+//@import "layout/**/*";
+
+// Import partials.
+// -----------------
+//@import "partials/**/*";
+
+// Import theme. (Never use sass-globbing)
+// -----------------
+//@import "theme/{theme_name}/{theme_file}";

@@ -1,0 +1,50 @@
+.tabs {
+  border-bottom: solid 1px darken($white, 10%);
+  list-style: none;
+  margin: {
+    bottom: $margin-default;
+    top: 0;
+  }
+  padding: 0;
+  @extend %clearfix;
+
+  li {
+    float: left;
+    line-height: 1.42857143;
+    list-style: none;
+    margin: {
+      bottom: -1px;
+      right: 1px;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+
+    a {
+      border: solid 1px transparent;
+      border-bottom-color: transparent;
+      border-radius: 4px 4px 0 0;
+      display: block;
+      padding: 10px 15px;
+      text-decoration: none;
+
+      &:hover {
+        background-color: darken($white, 10%);
+        border-color: darken($white, 10%);
+        text-decoration: none;
+      }
+    }
+
+    &.active {
+      a {
+        border-color: darken($white, 10%);
+        color: $text-color;
+        cursor: default;
+
+        &:hover {
+          background-color: transparent;
+        }
+      }
+    }
+  }
+}
