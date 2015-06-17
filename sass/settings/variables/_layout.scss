@@ -1,0 +1,53 @@
+// Layout variables.
+@import "typography"; // Import this because base line height variable.
+
+// Gap (white space) variables.
+$gap-size-default: $base-line-height;
+$gap-size: (
+  default: $gap-size-default,
+  triple:  $gap-size-default * 3,
+  double:  $gap-size-default * 2,
+  half:    $gap-size-default / 2,
+  third:   $gap-size-default / 3,
+  quarter: $gap-size-default / 4
+);
+@function gap-size($key: default) {
+  @return map-get($gap-size, $key);
+}
+
+$margin-default:    gap-size(default);
+$margin-triple:     gap-size(triple);
+$margin-double:     gap-size(double);
+$margin-half:       gap-size(half);
+$margin-third:      gap-size(third);
+$margin-quarter:    gap-size(quarter);
+
+$padding-default:   gap-size(default);
+$padding-triple:    gap-size(triple);
+$padding-double:    gap-size(double);
+$padding-half:      gap-size(half);
+$padding-third:     gap-size(third);
+$padding-quarter:   gap-size(quarter);
+
+$breakpoints: (
+  small:         0,
+  narrow:      640px,
+  normal:      980px,
+  wide:       1200px
+);
+@function breakpoint-size($key) {
+  @return map-get($breakpoints, $key);
+}
+
+$site-width-default: 95%;
+$site-width: (
+  default: $site-width-default,
+  small:   $site-width-default,
+  narrow:                90%,
+  normal:                90%,
+  wide:     map-get($breakpoints, wide)
+);
+@function site-width($key) {
+  @return map-get($site-width, $key);
+}
+
